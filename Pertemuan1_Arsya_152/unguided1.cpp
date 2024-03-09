@@ -1,46 +1,19 @@
 #include <iostream>
-#include <iomanip>
+#include <bitset>
 using namespace std;
-int main()
-{
-    char op;
-    float num1, num2;
-    // It allows user to enter operator i.e. +, -, *, /
-    cout << "Enter operator (+, -, *, /): ";
-    cin >> op;
-    // It allows user to enter the operands
-    cout << "Enter two operands: ";
-    cin >> num1 >> num2;
-    // Switch statement begins
-    switch (op)
-    {
-    // If user enters +
-    case '+':
-        cout << "Result: " << num1 + num2;
-        break;
-    // If user enters -
-    case '-':
-        cout << "Result: " << num1 - num2;
-        break;
-    // If user enters *
-    case '*':
-        cout << "Result: " << num1 * num2;
-        break;
-    // If user enters /
-    case '/':
-        if (num2 != 0)
-        {
-            cout << "Result: " << fixed << setprecision(2) << num1 / num2;
-        }
-        else
-        {
-            cout << "Error! Division by zero is not allowed.";
-        }
-        break;
-    // If the operator is other than +, -, * or /,
-    // error message will display
-    default:
-        cout << "Error! Operator is not correct";
-    } // switch statement ends
+
+int main() {
+    char pilihan_152 ;
+    int BilanganDesimal_152;
+
+    // Meminta pengguna untuk memasukkan angka desimal
+    cout << "Masukkan bilangan desimal: ";
+    cin >> BilanganDesimal_152;
+
+    // Menampilkan hasil konversi sesuai dengan pilihan (default: heksadesimal)
+    cout << "Heksadesimal: " << hex << BilanganDesimal_152 << endl;
+    cout << "Biner: " << bitset<32>(BilanganDesimal_152).to_string() << endl;
+    cout << "Oktal: " << oct << BilanganDesimal_152 << endl;
+
     return 0;
 }
