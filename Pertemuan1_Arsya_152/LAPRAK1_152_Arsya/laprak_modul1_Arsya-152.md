@@ -3,10 +3,10 @@
 
 ## Dasar Teori
 
-Tipe data itu adalah  cara kita mengelompokkan dan memberi label ke data agar komputer paham cara mengolahnya. Ada beberapa jenis tipe data yang umumnya dipelajari:
+Tipe data itu adalah  cara kita mengelompokkan dan memberi label ke data agar komputer paham cara mengolahnya. Tipe data yang berhubungan dengan bilangan bulat adalah char, int, short dan longAda beberapa jenis tipe data yang umumnya dipelajari yaitu:
 
 1. Tipe Data Primitif<br/>
-Tipe data yang simpel, Seperti buat menyimpan angka (misalnya, bilangan bulat atau desimal) atau informasi yang berisi benar atau salah (true atau false).
+Tipe data yang simpel, Seperti buat menyimpan angka (misalnya, bilangan bulat atau desimal) atau informasi yang berisi benar atau salah (true atau false). Tipe data ini berupa struktur atau larik
 
 2. Tipe Data Abstrak<br/>
 Tipe data yang bisa menyimpan lebih dari satu hal, contohnya buat nyimpen kata-kata atau teks (string). Juga bisa buat susun-susun data yang lebih rumit.
@@ -301,4 +301,6 @@ Map mirip dengan array namun dengan index yang memungkinkan untuk berupa tipe da
 Program-program yang diberikan mencakup penggunaan tipe data primitif,  abstrak, dan koleksi pada struktur data seperti struct dan class, serta fitur-fitur C++ seperti array dan map. Penggunaan class dan struct untuk menyimpan informasi mahasiswa. Program-program ini juga memanfaatkan tipe data primitif untuk operasi matematika dan konversi bilangan. Penggunaan map digunakan untuk mencari informasi berdasarkan kunci. Keseluruhan, program-program ini memberikan gambaran tentang cara menggunakan tipe data dan struktur data dalam bahasa pemrograman C++.
 
 ## Referensi
-[1] Adam Rian, structilmy, TUTORIAL STRUKTUR DATA MAP PADA C++. Jakarta: Structilmy; 2020.
+[1] Andi Baso, Nurjannah, and Satria Gunawan. Mudah Belajar Pemrograman Dasar C++ Syiah Kuala University Press. Aceh: 2021
+[2] Abdul Kadir, Elex Media Komputindi. Logika Pemrograman Menggunakan C++: 2019
+[3] Vivian Siahaan, Rismon Hasiholan. TUTORIAL Bahasa C++ Untuk Programmer : 2020
