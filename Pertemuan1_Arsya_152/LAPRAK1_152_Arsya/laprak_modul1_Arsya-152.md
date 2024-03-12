@@ -304,3 +304,8 @@ Program-program yang diberikan mencakup penggunaan tipe data primitif,  abstrak,
 [1] Andi Baso, Nurjannah, and Satria Gunawan. Mudah Belajar Pemrograman Dasar C++ Syiah Kuala University Press. Aceh: 2021
 [2] Abdul Kadir, Elex Media Komputindi. Logika Pemrograman Menggunakan C++: 2019
 [3] Vivian Siahaan, Rismon Hasiholan. TUTORIAL Bahasa C++ Untuk Programmer : 2020
+
+#### Full code unguided1 Screenshot:
+![Full code unguided1 ](fullcode_unguided1)
+![Full code unguided2 ](fullcode_unguided2)
+![Full code unguided3 ](fullcode_unguided3)
