@@ -297,15 +297,14 @@ Perbedaan Array dengan Map<br/>
 Map mirip dengan array namun dengan index yang memungkinkan untuk berupa tipe data selain integer. Dengan artian bahwa, Array adalah sebuah tipe data terstruktur yang digunakan untuk menyimpan data bertipe sama, sedangkan map adalah sebuah tipe data yang digunakan untuk menyimpan data dengan indeks yang dapat berupa tipe data selain integer. Sehingga  map ini yakni sebuah tipe data yang dapat menggunakan indeks yang lebih banyak dan lebih kompleks daripada array, serta dapat menyimpan data dengan tipe yang berbeda.
 
 
+#### Full code unguided1 Screenshot:
+![Full code unguided](fullcode_unguided.png)
+
 ## Kesimpulan
 Program-program yang diberikan mencakup penggunaan tipe data primitif,  abstrak, dan koleksi pada struktur data seperti struct dan class, serta fitur-fitur C++ seperti array dan map. Penggunaan class dan struct untuk menyimpan informasi mahasiswa. Program-program ini juga memanfaatkan tipe data primitif untuk operasi matematika dan konversi bilangan. Penggunaan map digunakan untuk mencari informasi berdasarkan kunci. Keseluruhan, program-program ini memberikan gambaran tentang cara menggunakan tipe data dan struktur data dalam bahasa pemrograman C++.
 
 ## Referensi
-[1] Andi Baso, Nurjannah, and Satria Gunawan. Mudah Belajar Pemrograman Dasar C++ Syiah Kuala University Press. Aceh: 2021
-[2] Abdul Kadir, Elex Media Komputindi. Logika Pemrograman Menggunakan C++: 2019
-[3] Vivian Siahaan, Rismon Hasiholan. TUTORIAL Bahasa C++ Untuk Programmer : 2020
+[1] Andi Baso, Nurjannah, and Satria Gunawan. Mudah Belajar Pemrograman Dasar C++ Syiah Kuala University Press. Aceh: 2021 <br/>
+[2] Abdul Kadir, Elex Media Komputindi. Logika Pemrograman Menggunakan C++: 2019 <br/>
+[3] Vivian Siahaan, Rismon Hasiholan. TUTORIAL Bahasa C++ Untuk Programmer : 2020 <br/>
 
-#### Full code unguided1 Screenshot:
-![Full code unguided1 ](fullcode_unguided1)
-![Full code unguided2 ](fullcode_unguided2)
-![Full code unguided3 ](fullcode_unguided3)
