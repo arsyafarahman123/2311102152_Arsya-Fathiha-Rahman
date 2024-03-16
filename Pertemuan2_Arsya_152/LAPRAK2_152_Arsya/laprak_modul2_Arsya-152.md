@@ -312,7 +312,7 @@ Penjelasan Program Unguided 3 - Program mencari nilai Maksimum, Minimum dan Nila
 Program ini adalah sebuah program menu yang memberikan opsi kepada pengguna untuk melakukan operasi perhitungan sederhana pada sejumlah angka yang dimasukkan. Pengguna dapat memilih untuk mencari nilai maksimum, minimum, atau rata-rata dari angka-angka tersebut, atau keluar dari program. Setelah pengguna memilih suatu opsi, program akan meminta pengguna untuk menginputkan angka-angka yang sesuai, lalu melakukan operasi yang diminta, dan mencetak hasilnya. Program akan terus berjalan dan meminta input pengguna hingga pengguna memilih untuk keluar dari program dengan memilih opsi "0".
 
 
-#### Full code unguided1 Screenshot:
+#### Full code Screenshot:
 ![Full code unguided](fullcode_unguided_152.png)
 
 ## Kesimpulan
