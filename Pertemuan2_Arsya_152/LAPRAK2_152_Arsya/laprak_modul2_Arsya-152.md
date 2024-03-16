@@ -14,9 +14,9 @@ Dimensi pada Array <br/>
 2. Array 2 dimensi <br/>
   Adalahh Array yang memerlukan dua indeks untuk mengidentifikasi suatu elemen tertentu disebut dengan array dua dimensi. Yang berupa array dengan dua tingkat indeks. <br/>
 3. Array 3 dimensi <br/>
-  Merupakan array dengan tiga tingkat indeks. Contohnya bisa berupa kubus tiga dimensi atau array data berstruktur yang lebih kompleks. <br/>
-4. (Array multidimensi dapat memiliki lebih dari dua dimensi) <br/>
-   Merupakan Array dengan lebih dari tiga dimensi, seperti tensor dalam ilmu komputer dan matematika. 
+   Merupakan array dengan tiga tingkat indeks. Contohnya bisa berupa kubus tiga dimensi atau array data berstruktur yang lebih kompleks. <br/>
+4. Array multidimensi <br/>
+   Merupakan Array dengan lebih dari tiga dimensi, seperti tensor dalam ilmu komputer dan matematika. Array multidimensi adalah sebuah array yang terdiri dari beberapa array yang disebut sub-array. Setiap sub-array mengakses elemen yang berada di dalamnya dengan menggunakan indeks yang berbeda. Array multidimensi banyak digunakan ketika ingin menyimpan data dalam bentuk tabel, seperti tabel dengan baris dan kolom
  
 
 ## Guided1
