@@ -72,7 +72,7 @@ int main()
     }
 }
 ```
-Penjelasan Guided1
+Penjelasan Guided1<br/>
 Program ini adalah sebuah program menggunakan array untuk memasukkan dan menampilkan data dalam bentuk array tiga dimensi. pengguna tinggal mengetikkan nilainya. lalu, programnya bakal menampilkan lagi data yang sudah dimasukkan, berupa nilai x,y dan z. Selanjutnya, ada tampilan berupa matriks dari data yang udah dimasukkan. Jadi, pengguna dapat mengatur dan melihat data dalam bentuk tiga dimensi.
 
 ## Guided2
@@ -105,7 +105,7 @@ int main()
     cout << "Nilai maksimum adalah " << maks << " berada di Array ke " << lokasi << endl;
 }
 ```
-Penjelasan Guided2
+Penjelasan Guided2<br/>
 Program array guided2 yaitu untuk mencari nilai maksimum dalam sebuah array. Pengguna diminta untuk memasukkan panjang array dan elemen-elemen array. Selanjutnya, program akan mencari nilai maksimum dan menampilkan nilai tersebut beserta lokasinya dalam array.
 
 ## Unguided1
