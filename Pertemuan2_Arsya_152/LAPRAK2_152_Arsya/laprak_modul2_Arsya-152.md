@@ -7,16 +7,16 @@ array sebenarnya adalah suatu referensi yang menunjuk kepada suatu objek array d
 dispesifikasi nama referensi ke array dan nomor posisi elemen di dalam array. Nomor posisi elemen
 disebut pula dengan indeks atau subskrip elemen.
 
-Dimensi pada Array
-1.Array 1 dimensi 
+Dimensi pada Array <br/>
+1. Array 1 dimensi <br/>
   Yaitu array dengan satu tingkat indeks. Contohnya adalah array seperti [1, 2, 3, 4, 5].
   merupakan sebuah penginisialisasian, pembacaan data, penampilan data, dan pencarian elemen terbesar dan/atau terkecil. Selain itu, jika data berupa angka numerik, beberapa operasi dasar lain yang dapat diterapkan pada sebuah array satu - dimensi adalah mencari penjumlahan dan rerata elemen - elemen array. Setiap operasi ini mensyaratkan kemampuan untuk menjelajah elemen-elemen array. <br/>
-2.Array 2 dimensi 
+2. Array 2 dimensi <br/>
   Adalahh Array yang memerlukan dua indeks untuk mengidentifikasi suatu elemen tertentu disebut dengan array dua dimensi. Yang berupa array dengan dua tingkat indeks. <br/>
-3.Array 3 dimensi
+3. Array 3 dimensi <br/>
   Merupakan array dengan tiga tingkat indeks. Contohnya bisa berupa kubus tiga dimensi atau array data berstruktur yang lebih kompleks. <br/>
-4.(Array multidimensi dapat memiliki lebih dari dua dimensi) 
-   Merupakan Array dengan lebih dari tiga dimensi, seperti tensor dalam ilmu komputer dan matematika. <br/>
+4. (Array multidimensi dapat memiliki lebih dari dua dimensi) <br/>
+   Merupakan Array dengan lebih dari tiga dimensi, seperti tensor dalam ilmu komputer dan matematika. 
  
 
 ## Guided1
