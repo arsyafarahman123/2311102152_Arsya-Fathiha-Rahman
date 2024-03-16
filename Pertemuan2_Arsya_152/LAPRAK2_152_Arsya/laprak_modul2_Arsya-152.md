@@ -5,9 +5,9 @@
 Array merupakan sekelompok variabel (disebut pula dengan elemen atau komponen) yang memuat nilai-nilai yang bertipe sama. Array adalah objek, jadi dipandang sebagai tipe referensi.
 array sebenarnya adalah suatu referensi yang menunjuk kepada suatu objek array di dalam memori. Untuk menunjuk ke elemen tertentu di dalam array,
 dispesifikasi nama referensi ke array dan nomor posisi elemen di dalam array. Nomor posisi elemen
-disebut pula dengan indeks atau subskrip elemen.
+disebut pula dengan indeks atau subskrip elemen. Elemen-elemen dalam array diindeks, yang berarti setiap elemen memiliki nomor posisi unik yang digunakan untuk mengaksesnya. Array dalam C++ memiliki ukuran tetap yang ditentukan saat deklarasi, yang berarti ukuran array tidak dapat diubah setelah deklarasi awal.
 
-Dimensi pada Array <br/>
+Dimensi pada Array: <br/>
 1. Array 1 dimensi <br/>
   Yaitu array dengan satu tingkat indeks. Contohnya adalah array seperti [1, 2, 3, 4, 5].
   merupakan sebuah penginisialisasian, pembacaan data, penampilan data, dan pencarian elemen terbesar dan/atau terkecil. Selain itu, jika data berupa angka numerik, beberapa operasi dasar lain yang dapat diterapkan pada sebuah array satu - dimensi adalah mencari penjumlahan dan rerata elemen - elemen array. Setiap operasi ini mensyaratkan kemampuan untuk menjelajah elemen-elemen array. <br/>
