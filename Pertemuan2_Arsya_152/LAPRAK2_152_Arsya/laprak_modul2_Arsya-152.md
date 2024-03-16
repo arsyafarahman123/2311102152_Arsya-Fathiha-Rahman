@@ -10,13 +10,13 @@ disebut pula dengan indeks atau subskrip elemen.
 Dimensi pada Array
 1.Array 1 dimensi 
   Yaitu array dengan satu tingkat indeks. Contohnya adalah array seperti [1, 2, 3, 4, 5].
-  merupakan sebuah penginisialisasian, pembacaan data, penampilan data, dan pencarian elemen terbesar dan/atau terkecil. Selain itu, jika data berupa angka numerik, beberapa operasi dasar lain yang dapat diterapkan pada sebuah array satu - dimensi adalah mencari penjumlahan dan rerata elemen - elemen array. Setiap operasi ini mensyaratkan kemampuan untuk menjelajah elemen-elemen array. 
+  merupakan sebuah penginisialisasian, pembacaan data, penampilan data, dan pencarian elemen terbesar dan/atau terkecil. Selain itu, jika data berupa angka numerik, beberapa operasi dasar lain yang dapat diterapkan pada sebuah array satu - dimensi adalah mencari penjumlahan dan rerata elemen - elemen array. Setiap operasi ini mensyaratkan kemampuan untuk menjelajah elemen-elemen array. <br/>
 2.Array 2 dimensi 
-  Adalahh Array yang memerlukan dua indeks untuk mengidentifikasi suatu elemen tertentu disebut dengan array dua dimensi. Yang berupa array dengan dua tingkat indeks.
+  Adalahh Array yang memerlukan dua indeks untuk mengidentifikasi suatu elemen tertentu disebut dengan array dua dimensi. Yang berupa array dengan dua tingkat indeks. <br/>
 3.Array 3 dimensi
-  Merupakan array dengan tiga tingkat indeks. Contohnya bisa berupa kubus tiga dimensi atau array data berstruktur yang lebih kompleks.
+  Merupakan array dengan tiga tingkat indeks. Contohnya bisa berupa kubus tiga dimensi atau array data berstruktur yang lebih kompleks. <br/>
 4.(Array multidimensi dapat memiliki lebih dari dua dimensi) 
-   Merupakan Array dengan lebih dari tiga dimensi, seperti tensor dalam ilmu komputer dan matematika.
+   Merupakan Array dengan lebih dari tiga dimensi, seperti tensor dalam ilmu komputer dan matematika. <br/>
  
 
 ## Guided1
@@ -225,10 +225,9 @@ int main() {
 #### Output:
 ![Screenshot Output Unguided 2_Arsya](output-unguided2_152.png)
 
-'''Penjelasan Program Unguided 2 - Program input array 3 dimensi: <br/>
+Penjelasan Program Unguided 2 - Program input array 3 dimensi: <br/>
 Program yang telah saya buat adalah program meminta user untuk menginputkan ukuran tiga dimensi dari sebuah array, kemudian mengisi array tersebut dengan input yang diberikan oleh pengguna. Setelah itu, program mencetak semua elemen array beserta tampilan array dalam bentuk yang lebih terstruktur. Kesimpulannya, program ini memungkinkan pengguna untuk membuat array tiga dimensi dengan ukuran yang ditentukan oleh pengguna sendiri. Setelah itu, pengguna diminta untuk mengisi setiap elemen array dengan nilai yang diinginkan. Setelah array diisi, program mencetak seluruh elemen array beserta indeksnya. Dimana program mendeklarasikan array tiga dimensi yaitu5 arr_152 dengan ukuran yang sesuai dengan input pengguna (ukX, ukY, dan ukZ)
 
-Penjelasan  <br/>
 
 ## Unguided3
 
