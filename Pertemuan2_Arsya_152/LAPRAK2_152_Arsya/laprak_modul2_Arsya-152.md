@@ -167,6 +167,10 @@ Program menggunakan looping for untuk melakukan perulangan melalui array, dan me
 Setelah itu, program mencetak kategori bilangan genap dan ganjil secara terpisah.
 
 
+#### Full code Screenshot:
+![Full code unguided1](fullcode_unguided1_152.png)
+
+
 ## Unguided2
 
 ### 2. [Buatlah program Input array tiga dimensi (seperti pada guided) tetapi jumlah atau ukuran elemennya diinputkan oleh user!]
@@ -228,6 +232,8 @@ int main() {
 Penjelasan Program Unguided 2 - Program input array 3 dimensi: <br/>
 Program yang telah saya buat adalah program meminta user untuk menginputkan ukuran tiga dimensi dari sebuah array, kemudian mengisi array tersebut dengan input yang diberikan oleh pengguna. Setelah itu, program mencetak semua elemen array beserta tampilan array dalam bentuk yang lebih terstruktur. Kesimpulannya, program ini memungkinkan pengguna untuk membuat array tiga dimensi dengan ukuran yang ditentukan oleh pengguna sendiri. Setelah itu, pengguna diminta untuk mengisi setiap elemen array dengan nilai yang diinginkan. Setelah array diisi, program mencetak seluruh elemen array beserta indeksnya. Dimana program mendeklarasikan array tiga dimensi yaitu5 arr_152 dengan ukuran yang sesuai dengan input pengguna (ukX, ukY, dan ukZ)
 
+#### Full code Screenshot:
+![Full code unguided2](fullcode_unguided2_152.png)
 
 ## Unguided3
 
@@ -311,9 +317,8 @@ int main() {
 Penjelasan Program Unguided 3 - Program mencari nilai Maksimum, Minimum dan Nilai rata – rata <br/>
 Program ini adalah sebuah program menu yang memberikan opsi kepada pengguna untuk melakukan operasi perhitungan sederhana pada sejumlah angka yang dimasukkan. Pengguna dapat memilih untuk mencari nilai maksimum, minimum, atau rata-rata dari angka-angka tersebut, atau keluar dari program. Setelah pengguna memilih suatu opsi, program akan meminta pengguna untuk menginputkan angka-angka yang sesuai, lalu melakukan operasi yang diminta, dan mencetak hasilnya. Program akan terus berjalan dan meminta input pengguna hingga pengguna memilih untuk keluar dari program dengan memilih opsi "0".
 
-
 #### Full code Screenshot:
-![Full code unguided](fullcode_unguided_152.png)
+![Full code unguided3](fullcode_unguided3_152.png)
 
 ## Kesimpulan
 Keseluruhan konsep materi array beserta guided dan unguided yang telah dibuat menunjukkan beragam penggunaan array dalam bahasa pemrograman C++, memperlihatkan bagaimana array dapat digunakan untuk memasukkan, mengelola, dan melakukan operasi seperti pencarian nilai maksimum/minimum serta analisis statistik lainnya, sehingga memberikan pemahaman yang mendalam tentang konsep array dan aplikasinya dalam pemrograman c++ serta memahami mengenai macam macam dimensi dalam array dan bentuk matriks dan urutan elemen array, mencari nilai maksimum dan minimum dalam array.
