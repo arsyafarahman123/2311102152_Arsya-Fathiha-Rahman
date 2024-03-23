@@ -670,15 +670,16 @@ int main() {
 
 ```
 #### Output:
-![Screenshot Output Unguided 1_Arsya](output-unguided1_152.png)
+![Screenshot Output Unguided 1_part1](output-unguided1_part1.png)
+![Screenshot Output Unguided 1_part2](output-unguided1_part2.png)
 
 Penjelasan Program Unguided1 <br/>
 Program yang telah saya buat pada Unguided1 adalah program menu Single Linked List Non-Circular untuk menyimpan Nama dan usia mahasiswa, dengan menggunakan inputan dari user. Dengan beragam pilihan menu yakni hapus data, menambahkan data tengah, menambahkan data awal, ubah data, dan menampilkan seluruh data. lalu dikelola oleh (Kelas DataMahasiswa_152) yang dapat digunakan untuk menyimpan data mahasiswa.
 Selanjutnya pada penggunaan Metode insert_depan, insert_belakang, insert_tengah, dan insert_awal digunakan untuk menambahkan data mahasiswa ke dalam linked list. Sehingga Output dari program ini akan menampilkan langkah-langkah operasi yang dilakukan pada linked list, serta hasil akhir dari linked list setelah operasi-operasi tersebut dilakukan. Misalnya, hasil output akan menampilkan data mahasiswa sesuai dengan operasi-operasi yang telah diinputkan oleh users seperti dapat mengubah/edit datanya.<br/>
 
 #### Full code Screenshot:
-![Screenshot Output Unguided 1_part1](output-unguided1_part1.png)
-![Screenshot Output Unguided 1_part2](output-unguided1_part2.png)
+![Screenshot Output Unguided1](fullcode_unguided1_152.png)
+
 ## Unguided2
 
 ### 2. [Program Double Linked List penambahan operasi untuk menambah data, menghapus, dan update di tengah / diurutan tertentu yang diminta. Selain itu, buatlah agar tampilannya menampilkan Nama produk dan harga skincare]
@@ -927,7 +928,7 @@ int main() {
 
 ```
 #### Output:
-![Screenshot Output Unguided 1](output-unguided2.png)
+![Screenshot Output Unguided 2](output-unguided2_152.pngpng)
 
 
 Penjelasan Program Unguided 2 - Program Penjualan Skincare: <br/>
