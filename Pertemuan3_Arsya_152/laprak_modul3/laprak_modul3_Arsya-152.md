@@ -6,8 +6,8 @@ Penjelasan Linkedlist<br/>
 Linked List dalam C++ adalah suatu struktur data yang menggunakan pointer untuk menyimpan data yang berhubungan dengan data lain dalam sebuah urutan yang terkait. Linked List menggunakan pointer untuk menghubungkan setiap elemen ke elemen berikutnya, memungkinkan pengaksesan dan pengubahsuaian data secara dinamis.
 Pengolahan data yang kita lakukan menggunakan komputer yakni berupa penyimpanan data dan pengolahan lain dari sekelompok data yang telah terorganisir dalam sebuah urutan tertentu. Salah satu cara untuk menyimpan sekumpulan data yang kita miliki adalah menggunakan linkedlist.
 Keuntungan dan kerugian pemakaian larik/linkedlist untuk menyimpan sekelompok data yang banyaknya selalu berubah dan tidak diketahui dengan pasti kapan penambahan atau penghapusan akan berakhir.<br/>
-Sebuah node dalam Linked List C++ terdiri dari dua bagian:
-Data: Bagian yang berisi nilai data yang akan disimpan.
+Sebuah node dalam Linked List C++ terdiri dari dua bagian: <br/>
+Data: Bagian yang berisi nilai data yang akan disimpan. <br/>
 Pointers: Bagian yang berisi alamat pointer ke elemen berikutnya dalam Linked List.<br/>
 Jenis Linkedlist <br/>
 a. Single Linked List<br/>
