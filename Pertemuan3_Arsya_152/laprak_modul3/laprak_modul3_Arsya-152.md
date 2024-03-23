@@ -928,7 +928,7 @@ int main() {
 
 ```
 #### Output:
-![Screenshot Output Unguided 2](output-unguided2_152.pngpng)
+![Screenshot Output Unguided 2](output-unguided2_152.png)
 
 
 Penjelasan Program Unguided 2 - Program Penjualan Skincare: <br/>
