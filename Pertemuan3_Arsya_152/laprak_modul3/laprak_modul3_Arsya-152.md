@@ -492,7 +492,7 @@ int main()
 }
 ```
 Penjelasan Guided2<br/>
-Program array guided2 yaitu sebuah program  Double linked list yang memberikan pilihan untuk menambah, menghapus, memperbarui, menampilkan, dan menghapus semua data dalam linked list sesuai keinginan users. Program akan terus berjalan hingga pengguna memilih untuk keluar.<br/>
+Program guided2 diatas yaitu sebuah program  Double linked list yang memberikan pilihan untuk menambah, menghapus, memperbarui, menampilkan, dan menghapus semua data dalam linked list sesuai keinginan users. Program akan terus berjalan hingga pengguna memilih untuk keluar.<br/>
 
 ## Unguided1
 
