@@ -855,7 +855,7 @@ int main() {
 
     int pilihan;
     do {
-        cout << "\nToko Skincare Purwokerto" << endl;
+        cout << "\nToko Skincare Purwokerto by Arsya" << endl;
         cout << "1. Tambah Data" << endl;
         cout << "2. Hapus Data" << endl;
         cout << "3. Update Data" << endl;
