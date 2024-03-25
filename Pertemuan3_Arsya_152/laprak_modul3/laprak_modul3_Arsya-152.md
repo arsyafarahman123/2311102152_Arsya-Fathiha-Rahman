@@ -727,7 +727,23 @@ int main() {
 
 Penjelasan Program Unguided1 <br/>
 Program yang telah saya buat pada Unguided1 adalah program menu Single Linked List Non-Circular untuk menyimpan Nama dan usia mahasiswa, dengan menggunakan inputan dari user. Dengan beragam pilihan menu yakni hapus data, menambahkan data tengah, menambahkan data awal, ubah data, dan menampilkan seluruh data. lalu dikelola oleh (Kelas DataMahasiswa_152) yang dapat digunakan untuk menyimpan data mahasiswa.
-Selanjutnya pada penggunaan Metode insert_depan, insert_belakang, insert_tengah, dan insert_awal digunakan untuk menambahkan data mahasiswa ke dalam linked list. Sehingga Output dari program ini akan menampilkan langkah-langkah operasi yang dilakukan pada linked list, serta hasil akhir dari linked list setelah operasi-operasi tersebut dilakukan. Misalnya, hasil output akan menampilkan data mahasiswa sesuai dengan operasi-operasi yang telah diinputkan oleh users seperti dapat mengubah/edit datanya.<br/>
+Selanjutnya pada penggunaan Metode insert_depan, insert_belakang, insert_tengah, dan insert_awal digunakan untuk menambahkan data mahasiswa ke dalam linked list. Sehingga Output dari program ini akan menampilkan langkah-langkah operasi yang dilakukan pada linked list, serta hasil akhir dari linked list setelah operasi-operasi tersebut dilakukan. Misalnya, hasil output akan menampilkan data mahasiswa sesuai dengan operasi-operasi yang telah diinputkan oleh users seperti dapat mengubah/edit datanya.
+Pada tampilan Menu yaitu Program menampilkan menu operasi untuk memungkinkan pengguna memilih tindakan apa yang ingin mereka lakukan terhadap data mahasiswa, lalu Penerima Input yaitu Program meminta pengguna untuk memasukkan pilihan mereka dan data yang diperlukan, seperti nama, usia, posisi, nama baru, dan usia baru tergantung pada operasi yang dipilih. Lalu pada program ini terdapat Switch Case yaitu Program menggunakan struktur kontrol switch untuk memproses pilihan pengguna. Sesuaikan pilihan yang akan diinputkan oleh users.
+Terdapat Pengulangan pada akhir program, saat berjalan dalam loop do-while sehingga pengguna dapat terus memilih operasi hingga mereka memilih untuk keluar (pilihan 7).<br/>
+ 
+<br/> Penjelasan dari setiap opsi dalam menu tersebut:<br/> 
+
+<br/> Tambah Data Mahasiswa di Awal: Opsi ini memungkinkan pengguna untuk menambahkan data mahasiswa baru di awal linked list. Pengguna diminta untuk memasukkan nama dan usia mahasiswa yang akan ditambahkan, dan data tersebut akan dimasukkan ke bagian awal linked list.<br/>
+
+<br/>Tambah Data Mahasiswa di Belakang: Opsi ini memungkinkan pengguna untuk menambahkan data mahasiswa baru di akhir linked list. Pengguna diminta untuk memasukkan nama dan usia mahasiswa yang akan ditambahkan, dan data tersebut akan dimasukkan ke bagian belakang linked list.<br/>
+
+<br/>Tambah Data Mahasiswa di Tengah: Opsi ini memungkinkan pengguna untuk menambahkan data mahasiswa baru di tengah linked list, di antara dua node yang sudah ada. Pengguna diminta untuk memasukkan nama, usia, dan posisi di mana data mahasiswa baru akan disisipkan.<br/>
+
+<br/>Ubah Data Mahasiswa: Opsi ini memungkinkan pengguna untuk mengubah data mahasiswa yang sudah ada. Pengguna diminta untuk memasukkan nama mahasiswa yang ingin diubah, nama baru, dan usia baru.<br/>
+
+<br/>Hapus Data Mahasiswa: Opsi ini memungkinkan pengguna untuk menghapus data mahasiswa yang sudah ada berdasarkan nama. Pengguna diminta untuk memasukkan nama mahasiswa yang ingin dihapus.<br/>
+
+<br/>Tampilkan Data Mahasiswa: Opsi ini akan menampilkan semua data mahasiswa yang tersimpan dalam linked list.<br/>
 
 #### Full code Screenshot:
 ![Screenshot Output Unguided1](fullcode_unguided1_152.png)
