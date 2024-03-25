@@ -68,25 +68,35 @@ public:
         cout << "Data " << nama << " berhasil dihapus." << endl;
     }
 
-    void insert_tengah(string nama, int umur_152, int posisi) {
-        Node* temp = head;
-        int current_pos = 1;
-
-        while (temp != nullptr && current_pos != posisi) {
-            temp = temp->next;
-            current_pos++;
-        }
-
-        if (temp == nullptr) {
-            cout << "Posisi tidak valid." << endl;
-            return;
-        }
-
-        Node* new_node = new Node(nama, umur_152);
-        new_node->next = temp->next;
-        temp->next = new_node;
-        cout << "Data " << nama << " berhasil ditambahkan di posisi " << posisi << "." << endl;
+   void insert_tengah(string nama, int umur_152, int posisi) {
+    if (posisi <= 0) {
+        cout << "Posisi tidak valid." << endl;
+        return;
     }
+
+    if (posisi == 1 || head == nullptr) {
+        insert_depan(nama, umur_152);
+        return;
+    }
+
+    Node* new_node = new Node(nama, umur_152);
+    Node* temp = head;
+    int current_pos = 1;
+
+    while (temp != nullptr && current_pos < posisi - 1) {
+        temp = temp->next;
+        current_pos++;
+    }
+
+    if (temp == nullptr) {
+        cout << "Posisi tidak valid." << endl;
+        return;
+    }
+
+    new_node->next = temp->next;
+    temp->next = new_node;
+    cout << "Data " << nama << " berhasil ditambahkan di posisi " << posisi << "." << endl;
+}
 
     void insert_awal(string nama, int umur_152) {
         Node* new_node = new Node(nama, umur_152);
@@ -110,46 +120,88 @@ public:
     }
 
     void tampilkan() {
-    Node* temp = head;
-    if (temp == nullptr) {
-        cout << "Data Mahasiswa kosong." << endl;
-        return;
+        Node* temp = head;
+        if (temp == nullptr) {
+            cout << "Data Mahasiswa kosong." << endl;
+            return;
+        }
+        cout << left << setw(20) << "Nama" << setw(10) << "Usia" << endl;
+        cout << setfill('-') << setw(30) << "-" << setfill(' ') << endl;
+        while (temp != nullptr) {
+            cout << left << setw(20) << temp->nama << setw(10) << temp->umur_152 << endl;
+            temp = temp->next;
+        }
     }
-    cout << left << setw(20) << "Nama" << setw(10) << "Usia" << endl;
-    cout << setfill('-') << setw(30) << "-" << setfill(' ') << endl;
-    while (temp != nullptr) {
-        cout << left << setw(20) << temp->nama << setw(10) << temp->umur_152 << endl;
-        temp = temp->next;
-    }
-}
-
 };
 
 int main() {
     DataMahasiswa_152 Data_mahasiswa_152;
 
-    // Memasukkan data mahasiswa
-    Data_mahasiswa_152.insert_depan("Arsya Fathiha", 18);  // Data Saya
-    Data_mahasiswa_152.insert_belakang("John", 19);
-    Data_mahasiswa_152.insert_belakang("Jane", 20);
-    Data_mahasiswa_152.insert_belakang("Michael", 18);
-    Data_mahasiswa_152.insert_belakang("Yusuke", 19);
-    Data_mahasiswa_152.insert_belakang("Akechi", 20);
-    Data_mahasiswa_152.insert_belakang("Hoshino", 18);
-    Data_mahasiswa_152.insert_belakang("Karin", 18);
+    int choice;
+    string nama, nama_baru;
+    int umur, umur_baru, posisi;
 
-   // Operasi Pemanggilan 
-  
-    cout << "\nd. Add data Igor di awal:" << endl;
-    Data_mahasiswa_152.insert_awal("Igor", 20);
-    Data_mahasiswa_152.tampilkan();
+    do {
+        cout << "\nMenu Operasi Data Mahasiswa:" << endl;
+        cout << "1. Tambah Data Mahasiswa di Awal" << endl;
+        cout << "2. Tambah Data Mahasiswa di Belakang" << endl;
+        cout << "3. Tambah Data Mahasiswa di Tengah" << endl;
+        cout << "4. Ubah Data Mahasiswa" << endl;
+        cout << "5. Hapus Data Mahasiswa" << endl;
+        cout << "6. Tampilkan Data Mahasiswa" << endl;
+        cout << "7. Keluar" << endl;
+        cout << "Pilihan Anda: ";
+        cin >> choice;
 
-    cout << "\ne. Ubah data Michael menjadi Reyn:" << endl;
-    Data_mahasiswa_152.ubah("Michael", "Reyn", 18);
-    Data_mahasiswa_152.tampilkan();
-
-    cout << "\nf. Tampilkan seluruh data:" << endl;
-    Data_mahasiswa_152.tampilkan();
+        switch (choice) {
+            case 1:
+                cout << "Masukkan nama mahasiswa: ";
+                cin >> nama;
+                cout << "Masukkan usia mahasiswa: ";
+                cin >> umur;
+                Data_mahasiswa_152.insert_awal(nama, umur);
+                break;
+            case 2:
+                cout << "Masukkan nama mahasiswa: ";
+                cin >> nama;
+                cout << "Masukkan usia mahasiswa: ";
+                cin >> umur;
+                Data_mahasiswa_152.insert_belakang(nama, umur);
+                break;
+            case 3:
+                cout << "Masukkan nama mahasiswa: ";
+                cin >> nama;
+                cout << "Masukkan usia mahasiswa: ";
+                cin >> umur;
+                cout << "Masukkan posisi untuk menyisipkan data: ";
+                cin >> posisi;
+                Data_mahasiswa_152.insert_tengah(nama, umur, posisi);
+                break;
+            case 4:
+                cout << "Masukkan nama mahasiswa yang ingin diubah: ";
+                cin >> nama;
+                cout << "Masukkan nama baru: ";
+                cin >> nama_baru;
+                cout << "Masukkan usia baru: ";
+                cin >> umur_baru;
+                Data_mahasiswa_152.ubah(nama, nama_baru, umur_baru);
+                break;
+            case 5:
+                cout << "Masukkan nama mahasiswa yang ingin dihapus: ";
+                cin >> nama;
+                Data_mahasiswa_152.hapus(nama);
+                break;
+            case 6:
+                cout << "Data Mahasiswa:" << endl;
+                Data_mahasiswa_152.tampilkan();
+                break;
+            case 7:
+                cout << "Terima kasih, program selesai." << endl;
+                break;
+            default:
+                cout << "Pilihan tidak valid. Silakan pilih lagi." << endl;
+        }
+    } while (choice != 7);
 
     return 0;
 }
