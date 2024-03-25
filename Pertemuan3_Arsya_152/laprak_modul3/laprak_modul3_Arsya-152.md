@@ -998,7 +998,6 @@ int main() {
 #### Output:
 ![Screenshot Output Unguided 2](output-unguided2_152.png)
 
-
 Penjelasan Program Unguided 2 - Program Penjualan Skincare: <br/>
 Program yang telah saya buat pada Unguided2 adalah program menu Double Linked List untuk menyimpan data produk skincare disebuah toko di Purwokerto. Doubly linked list sendiri adalah jenis linked list di mana setiap elemen memiliki dua pointer, yaitu pointer ke elemen sebelumnya (prev) dan pointer ke elemen berikutnya (next). Program ini menggunakan struktur data tersebut untuk menyimpan data produk skincare.
 Users diberikan pilihan menu yang berisi opsi untuk melakukan operasi yang diinginkan pada data produk skincare.
