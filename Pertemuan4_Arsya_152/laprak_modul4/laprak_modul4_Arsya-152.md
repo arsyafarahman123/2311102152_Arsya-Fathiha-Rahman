@@ -1669,8 +1669,8 @@ j) Terakhir, Anda menampilkan seluruh data menggunakan fungsi tampilkan().<br/>
 Semua perubahan dan operasi di atas dilakukan melalui menu yang diberikan kepada pengguna. Setiap langkah dieksekusi dalam loop do-while sampai pengguna memilih untuk keluar (pilihan 0).
 <br/>
 
-#### Full code Screenshot Unguided 123:
-![Full code unguided](fullcode_unguided_152.png)
+#### Full code Screenshot Unguided 1,2, dan 3:
+![Full code unguided](fullcode_unguided123_152.png)
 ## Kesimpulan
 Keseluruhan konsep materi linkedlist beserta guided dan unguided yang telah dibuat dari modul 4 baik guided dan unguidednya tersebut adalah implementasi dari struktur data Linked List baik Linked List Circular dan Non Circular Keseluruhandalam bahasa pemrograman C++. Keseluruhan program baik guided dan unguided mencakup beberapa fitur dasar seperti penambahan, penghapusan, dan pengubahan data dalam Linked List, serta kemampuan untuk menampilkan isi dari Linked List tersebut. Program tersebut juga dilengkapi dengan menu interaktif yang memungkinkan pengguna untuk memilih operasi yang ingin dilakukan terhadap Linked List, seperti menambah, mengubah, atau menghapus data, serta menampilkan isi dari Linked List tersebut. Dengan demikian, program tersebut dapat digunakan sebagai alat untuk memanipulasi dan mengelola data menggunakan struktur data Linked List.Dengan fitur-fitur ini, program tersebut dapat dijadikan sebagai contoh implementasi Linked List dalam bahasa pemrograman C++, serta sebagai alat yang berguna dalam pengelolaan dan manipulasi data.
 
