@@ -14,7 +14,6 @@ IsFull (Penuh): Memeriksa apakah stack penuh atau tidak (terutama pada implement
 Size (Ukuran): Mengembalikan jumlah elemen yang ada dalam stack.<br/>
 Clear (Hapus Semua): Mengosongkan atau menghapus semua elemen dari stack.<br/>
 Search (Cari): Mencari keberadaan elemen tertentu dalam stack.<br/>
-FUNGSI STACK PADA DATA<br/>
 
 Jenis-Jenis Stack<br/>
 1. Stack Diimplementasikan dengan Array<br/>
