@@ -309,7 +309,7 @@ Operasi PUSH: Setiap karakter dari string kalimat_152 dimasukkan ke dalam stack 
 Operasi POP: Setelah semua karakter dimasukkan ke dalam stack, loop while digunakan untuk mengeluarkan karakter-karakter dari stack dan menyusunnya dalam urutan terbalik. Karakter teratas dari stack diambil menggunakan top() dan kemudian dihapus dari stack menggunakan pop(). Karakter tersebut ditambahkan ke dalam string balikkanKata_152.<br/>
 
 
-#### Full code Screenshot Unguided 1:
+#### Full code Screenshot Unguided 2:
 ![Full code unguided](thefullcode_unguided2_152.png)
 
 ## Kesimpulan
