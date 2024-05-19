@@ -4,7 +4,7 @@
 ## Dasar Teori
 Penjelasan Searching
 Algoritma pencarian `(searching algorithm)` adalah algoritma yang menerima sebuah argumen kunci dan dengan langkah-langkah tertentu akan mencari rekaman dengan kunci tersebut. Setelah proses pencarian dilaksanakan, akan diperoleh salah satu dari dua kemungkinan, yaitu data yang dicari ditemukan (successful) atau tidak ditemukan (unsuccessful).<br/>
-![Arsya-](https://github.com/)<br/>
+![Arsya-Penjelasan Searching](https://github.com/arsyafarahman123/2311102152_Arsya-Fathiha-Rahman/blob/main/Pertemuan8_Arsya_152/Laprak_modul8/searching.png)<br/>
 `Algoritma Searching` yakni tahapan sistematis yang digunakan pada program untuk menelusuri suatu data yang dicari. Algoritma ini akan menerima sebuah argumen atau kata kunci yang akan dicari. Kemudian algoritma akan menjalankan langkah langkah tertentu untuk mendapatkan hasil berdasarkan kata kunci. Setelah proses pencarian selesai, maka akan diperoleh hasil dari salah satu dua kemungkinan, yaitu data yang dicari berdasarkan kata kunci telah ditemukan atau data tidak dapat ditemukan. <br/>
 
  Terdapat 2 metode searching dalam c++, yaitu `sequential search` dan `binary search`, Dengan penjelasan sebagai berikut:<br/>
@@ -27,7 +27,7 @@ Jika sudah tidak ada lagi data yang harus diperiksa.<br/>
 <br/>
 
 Gambaran contoh cara kerja `Sequential Search`:<br/>
-![Arsya-](https://github.com/)<br/>
+![Arsya-Penjelasan Sequential Searching](https://github.com/arsyafarahman123/2311102152_Arsya-Fathiha-Rahman/blob/main/Pertemuan8_Arsya_152/Laprak_modul8/sequentialsearch.png)<br/>
 Pada ilustrasi di atas terdapat sebuah array yang menampung 8 elemen. Nilai yang ingin kita cari adalah angka 7, oleh karena itu kita tambahkan angka 7 kebagian akhir array. Karena pada elemen terakhir terdapat nilai yaitu 2, maka kita simpan nilai tersebut ke variabel sementara yang dinamakan simpan.<br/>
 
 Konsep Sequential Search Search:<br/>
@@ -39,7 +39,7 @@ Konsep Sequential Search Search:<br/>
 
 Gambaran contoh cara kerja Binary Search:<br/>
 Langkah kerja binary search yakni mengurutkan elemen array terlebih dahulu jika tidak dalam urutan yang terurut, karena pencarian biner hanya diterapkan pada elemen yang diurutkan. Seperti pada contoh gambar berikut:<br/>
-![Arsya-](https://github.com/)<br/>
+![Arsya-Penjelasan Binary Searching](https://github.com/arsyafarahman123/2311102152_Arsya-Fathiha-Rahman/blob/main/Pertemuan8_Arsya_152/Laprak_modul8/Binarysearch.png)<br/>
 1. Pertama temukan elemen tengah array.<br/>
 2. Bandingkan elemen tengah dengan itemnya. Setelah langkah ini ada tiga kasus<br/>
 3. Jika elemen tengah adalah item yang diinginkan maka pencarian berhasil<br/>
@@ -217,11 +217,11 @@ Dimana hasil Input datanya yakni:<br/>
 
 Dengan penjelasan lengkap program sebagai berikut:<br/>
 
-Deklarasi Variabel Global
+* Deklarasi Variabel Global
 - int dataArray[7] = {1, 8, 2, 5, 4, 9, 7};: Mendeklarasikan dan menginisialisasi array dataArray dengan 7 elemen.<br/>
 - int cari;: Variabel untuk menyimpan nilai yang akan dicari.<br/>
 
-Fungsi Selection Sort<br/>
+* Fungsi Selection Sort<br/>
 - void selection_sort(): Mendefinisikan fungsi untuk mengurutkan array menggunakan algoritma selection sort.<br/>
 - for (i = 0; i < 7; i++): Loop untuk setiap elemen dalam array.<br/>
 - min = i;: Menganggap elemen pertama sebagai yang terkecil.<br/>
@@ -229,7 +229,7 @@ Fungsi Selection Sort<br/>
 - if (dataArray[j] < dataArray[min]): Jika ditemukan elemen yang lebih kecil, update indeks min.<br/>
 - temp = dataArray[i]; dataArray[i] = dataArray[min]; dataArray[min] = temp;: Tukar elemen terkecil yang ditemukan dengan elemen pada indeks i.<br/>
 
-Fungsi Binary Search<br/>
+* Fungsi Binary Search<br/>
 - void binarysearch(): Mendefinisikan fungsi untuk mencari nilai dalam array menggunakan algoritma binary search.<br/>
 - awal = 0; akhir = 6;: Inisialisasi indeks awal dan akhir.<br/>
 - while (!b_flag && awal <= akhir): Loop untuk mencari nilai selama nilai belum ditemukan dan indeks awal tidak melebihi indeks akhir.<br/>
@@ -240,7 +240,7 @@ Fungsi Binary Search<br/>
 - if (b_flag): Jika nilai ditemukan, cetak indeks.<br/>
 - else: Jika nilai tidak ditemukan, cetak pesan tidak ditemukan.<br/>
 
-Fungsi main()<br/>
+* Fungsi main()<br/>
 
 - selection_sort();: Panggil fungsi untuk mengurutkan array.<br/>
 - for (int x = 0; x < 7; x++) { cout << setw(3) << dataArray[x]; }: Loop untuk mencetak setiap elemen dalam array setelah diurutkan. <br/>
@@ -248,7 +248,7 @@ Fungsi main()<br/>
 - _getche();: Tunggu pengguna menekan tombol sebelum program selesai. <br/>
 - return 0;: Mengakhiri program dengan status sukses. <br/>
 
-Alur Program<br/>:
+* Alur Program: <br/>
 1. Program dimulai dan mencetak judul "BINARY SEARCH".<br/>
 2. Data awal ditampilkan.<br/>
 3. Pengguna memasukkan nilai yang ingin dicari.<br/>
@@ -553,13 +553,13 @@ Mengembalikan total jumlah huruf vokal yang ditemukan.<br/>
 5. if (MenentukanVokal_152(huruf)): Jika karakter tersebut adalah vokal (memanggil fungsi MenentukanVokal_152), tambahkan jumlahVokal.<br/>
 6. return jumlahVokal;: Mengembalikan jumlah huruf vokal yang ditemukan dalam kalimat.<br/>
 
-
+* Int main: <br/>
 - Looping do-while: Program berada dalam loop do-while yang memungkinkan pengguna untuk mengulangi proses penghitungan huruf vokal dalam beberapa - kalimat tanpa harus menjalankan ulang program.<br/>
 - Header dan Input: Menampilkan header program dan meminta pengguna untuk memasukkan sebuah kalimat.<br/>
 - Hitung dan Tampilkan: Menghitung jumlah huruf vokal dalam kalimat menggunakan fungsi hitungVokal_152 dan menampilkan hasilnya.<br/>
 - Konfirmasi Ulangi: Menanyakan kepada pengguna apakah mereka ingin mengulangi proses. Jika input adalah 'y' atau 'Y', program akan kembali ke awal loop.<br/>
 
-- Proses Program:<br/>
+* Proses Program:<br/>
 1. Program meminta pengguna untuk memasukkan sebuah kalimat.<br/>
 2. Program membaca kalimat tersebut.<br/>
 3. Program menghitung jumlah huruf vokal dalam kalimat menggunakan fungsi hitungVokal_152.<br/>
