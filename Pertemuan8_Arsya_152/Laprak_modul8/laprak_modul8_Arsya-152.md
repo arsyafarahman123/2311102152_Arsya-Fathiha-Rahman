@@ -39,7 +39,7 @@ Konsep Sequential Search Search:<br/>
 
 Gambaran contoh cara kerja Binary Search:<br/>
 Langkah kerja binary search yakni mengurutkan elemen array terlebih dahulu jika tidak dalam urutan yang terurut, karena pencarian biner hanya diterapkan pada elemen yang diurutkan. Seperti pada contoh gambar berikut:<br/>
-![Arsya-Penjelasan Binary Searching](https://github.com/arsyafarahman123/2311102152_Arsya-Fathiha-Rahman/blob/main/Pertemuan8_Arsya_152/Laprak_modul8/Binarysearch.png)<br/>
+![Arsya-Penjelasan Binary Searching](https://github.com/arsyafarahman123/2311102152_Arsya-Fathiha-Rahman/blob/main/Pertemuan8_Arsya_152/Laprak_modul8/Binersearch.png)<br/>
 1. Pertama temukan elemen tengah array.<br/>
 2. Bandingkan elemen tengah dengan itemnya. Setelah langkah ini ada tiga kasus<br/>
 3. Jika elemen tengah adalah item yang diinginkan maka pencarian berhasil<br/>
