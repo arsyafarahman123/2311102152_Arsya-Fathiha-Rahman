@@ -2,7 +2,7 @@
 <p align="center">Arsya Fathiha Rahman - 2311102152</p>
 
 ## Dasar Teori
-Penjelasan Searching
+Penjelasan Searching<br/>
 Algoritma pencarian `(searching algorithm)` adalah algoritma yang menerima sebuah argumen kunci dan dengan langkah-langkah tertentu akan mencari rekaman dengan kunci tersebut. Setelah proses pencarian dilaksanakan, akan diperoleh salah satu dari dua kemungkinan, yaitu data yang dicari ditemukan (successful) atau tidak ditemukan (unsuccessful).<br/>
 ![Arsya-Penjelasan Searching](https://github.com/arsyafarahman123/2311102152_Arsya-Fathiha-Rahman/blob/main/Pertemuan8_Arsya_152/Laprak_modul8/searching.png)<br/>
 `Algoritma Searching` yakni tahapan sistematis yang digunakan pada program untuk menelusuri suatu data yang dicari. Algoritma ini akan menerima sebuah argumen atau kata kunci yang akan dicari. Kemudian algoritma akan menjalankan langkah langkah tertentu untuk mendapatkan hasil berdasarkan kata kunci. Setelah proses pencarian selesai, maka akan diperoleh hasil dari salah satu dua kemungkinan, yaitu data yang dicari berdasarkan kata kunci telah ditemukan atau data tidak dapat ditemukan. <br/>
