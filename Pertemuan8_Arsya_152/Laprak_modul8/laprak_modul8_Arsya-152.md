@@ -266,110 +266,147 @@ Dengan penjelasan lengkap program sebagai berikut:<br/>
 /*
 by Arsya Fathiha Rahman - 2311102152
 */
-#include <iostream>
-#include <string>
-#include <algorithm> // Untuk sort
-#include <iomanip>   // Untuk setw
-#include <conio.h>   // Untuk _getche
+#include <iostream>  // Untuk input-output standar
+#include <string>    // Untuk penggunaan tipe data string
+#include <algorithm> // Untuk fungsi sort
+#include <iomanip>   // Untuk fungsi setw
+#include <conio.h>   // Untuk fungsi _getche
 
 using namespace std;
 
 // Deklarasi Struktur untuk menyimpan karakter dan indeks 
 struct KarakterIndeks_152 {
-    char karakter_152;
-    int indeks_152;
+    char karakter_152; // Karakter dalam kalimat
+    int indeks_152;     // Indeks karakter dalam kalimat
 };
 
-// Fungsi binary search untuk mencari sebuah huruf dalam sebuah kalimat
-bool binarySearch(const KarakterIndeks_152 *kalimat, int ukuran, char huruf, int &indeksAsli) {
-    // Inisialisasi indeks awal dan akhir pencarian
-    int awal = 0;
-    int akhir = ukuran - 1;
+// Fungsi binary search untuk mencari semua huruf yang sama dalam sebuah kalimat
+void binarySearch_152(const KarakterIndeks_152 *kalimat, int ukuran, char huruf, int* indeksAsliList, int& jumlah) {
+    int awal = 0;          // Indeks awal pencarian
+    int akhir = ukuran - 1; // Indeks akhir pencarian
 
-    // Perulangan terus berjalan selama program pencarian masih valid
     while (awal <= akhir) {
-        // Hitung indeks tengah interval saat ini
-        int tengah = (awal + akhir) / 2;
+        int tengah = (awal + akhir) / 2; // Indeks tengah
 
-        // Jika elemen tengah adalah elemen yang dicari, kembalikan true
+        // Jika huruf ditemukan pada indeks tengah
         if (kalimat[tengah].karakter_152 == huruf) {
-            indeksAsli = kalimat[tengah].indeks_152;
-            return true;
+            int kiri = tengah; // Indeks untuk pencarian ke kiri
+            int kanan = tengah; // Indeks untuk pencarian ke kanan
 
-        // Jika elemen tengah kurang dari elemen yang dicari
-        } else if (kalimat[tengah].karakter_152 < huruf) {
-            awal = tengah + 1;
-        // Jika elemen tengah lebih besar dari elemen yang dicari
-        } else {
-            akhir = tengah - 1;
+            // Cari huruf yang sama ke kiri
+            while (kiri >= 0 && kalimat[kiri].karakter_152 == huruf) {
+                indeksAsliList[jumlah++] = kalimat[kiri].indeks_152;
+                kiri--;
+            }
+
+            // Cari huruf yang sama ke kanan
+            while (kanan < ukuran && kalimat[kanan].karakter_152 == huruf) {
+                if (kanan != tengah) {
+                    indeksAsliList[jumlah++] = kalimat[kanan].indeks_152;
+                }
+                kanan++;
+            }
+
+            // Urutkan indeks huruf yang ditemukan
+            sort(indeksAsliList, indeksAsliList + jumlah);
+            return;
+        }
+        // Jika huruf berada di sebelah kanan tengah
+        else if (kalimat[tengah].karakter_152 < huruf) {
+            awal = tengah + 1; // Perbarui indeks awal
+        }
+        // Jika huruf berada di sebelah kiri tengah
+        else {
+            akhir = tengah - 1; // Perbarui indeks akhir
         }
     }
-// Jika elemen tidak ditemukan dalam perulangan, kembalikan false
-    return false;
+}
+
+// Fungsi untuk mencetak data yang sudah diurutkan
+void cetakData_152(const KarakterIndeks_152 *kalimatDenganIndeks, int panjangKalimat) {
+    cout << "| Data diurutkan menggunakan Ascending menjadi: ";
+    int count = 0;
+    for (int i = 0; i < panjangKalimat; i++) {
+        cout << kalimatDenganIndeks[i].karakter_152 << " ";
+        count++;
+        if (count >= 10 && i != panjangKalimat - 1) {
+            cout << endl    << "|                                                  ";
+            count = 0;
+        }
+    }
+    cout << endl;
 }
 
 int main() {
-    // Loop untuk mengulangi pencarian huruf dalam kalimat
     char ulang;
     do {
-        // Input kalimat dan huruf yang akan dicari
-        string kalimat;
-        char huruf;
+        string kalimat; // Variabel untuk menyimpan kalimat
+        char huruf;     // Variabel untuk menyimpan huruf yang dicari
 
-        cout << "|--------------------------------------------------------------|" << endl;
-
-    
-        const int lebarKonsol = 62;
-        string header = "--- PROGRAM PENCARIAN HURUF PADA KALIMAT ---";
-        int paddingKiri = (lebarKonsol - header.length()) / 2;
-
-        cout << setw(paddingKiri + header.length()) << header << endl;
-
-        cout << "|--------------------------------------------------------------|" << endl;
+        // Input kalimat dan huruf
         cout << "Masukkan sebuah kalimat: ";
         getline(cin, kalimat);
 
         cout << "Masukkan huruf yang ingin Anda cari: ";
-        
-        huruf = _getche(); // Menggunakan _getche untuk mendapatkan input tanpa menekan tombol enter
+        huruf = _getche();
         cout << endl;
 
+        cout << "|---------------------------------------------------------------------|" << endl;
+        cout << "|  Sebuah Kalimat               |  Huruf yang anda cari               |" << endl;
+        cout << "|---------------------------------------------------------------------|" << endl;
 
-        // Ubah huruf menjadi huruf kecil jika huruf besar
+        // Tampilkan kalimat dan huruf yang diinput
+        cout << "| " << setw(30) << left << kalimat << "| " << setw(36) << left << huruf  << "|" << endl;
+        cout << "|---------------------------------------------------------------------|" << endl;
+
+        // Ubah huruf menjadi huruf kecil jika huruf yang dimasukkan adalah huruf besar
         if (isupper(huruf)) {
             huruf = tolower(huruf);
         }
 
-        // Buat array dinamis untuk pasangan karakter dan indeks aslinya
-        int panjangKalimat = kalimat.length();
-        KarakterIndeks_152 *kalimatDenganIndeks = new KarakterIndeks_152[panjangKalimat];
+        int panjangKalimat = kalimat.length(); // Panjang kalimat
+        KarakterIndeks_152 *kalimatDenganIndeks = new KarakterIndeks_152[panjangKalimat]; // Array untuk menyimpan karakter dan indeksnya
 
-      // Mengubah setiap karakter dalam kalimat menjadi huruf kecil dan menyimpannya beserta indeksnya
+        // Isi array dengan karakter kalimat dan indeksnya
         for (int i = 0; i < panjangKalimat; i++) {
             kalimatDenganIndeks[i].karakter_152 = tolower(kalimat[i]);
             kalimatDenganIndeks[i].indeks_152 = i;
         }
-        // Urutkan array kalimatDenganIndeks berdasarkan karakter
+
+        // Urutkan array berdasarkan karakter
         sort(kalimatDenganIndeks, kalimatDenganIndeks + panjangKalimat, [](const KarakterIndeks_152 &a, const KarakterIndeks_152 &b) {
-            // Bandingkan dua karakter, mengembalikan true jika a kurang dari b
             return a.karakter_152 < b.karakter_152;
         });
-        // Deklarasi variabel untuk menyimpan indeks asli dari karakter yang dicari
-        int indeksAsli;
-        // Cari huruf dalam kalimat menggunakan binary search
-        bool ditemukan = binarySearch(kalimatDenganIndeks, panjangKalimat, huruf, indeksAsli);
 
-        if (ditemukan) {
-            cout << "Huruf (" << huruf << ") ditemukan dalam kalimat pada indeks ke-" << indeksAsli << "." << endl;
+        cout << "|---------------------------------------------------------------------|" << endl;
+        cetakData_152(kalimatDenganIndeks, panjangKalimat);
+        cout << "|---------------------------------------------------------------------|" << endl;
+
+        int indeksAsliList[panjangKalimat]; // Array untuk menyimpan indeks huruf yang ditemukan
+        int jumlah = 0; // Jumlah huruf yang ditemukan
+
+        // Cari dan simpan indeks huruf yang ditemukan
+        binarySearch_152(kalimatDenganIndeks, panjangKalimat, huruf, indeksAsliList, jumlah);
+
+        cout << "|---------------------------------------------------------------------|" << endl;
+        // Tampilkan hasil pencarian huruf
+        if (jumlah > 0) {
+            cout << "| Huruf (" << huruf << ") ditemukan dalam kalimat pada indeks ke- ";
+            for (int i = 0; i < jumlah; ++i) {
+                cout << indeksAsliList[i];
+                if (i < jumlah - 1) {
+                    cout << " dan ke-";
+                }
+            }
+            cout << "." << endl;
         } else {
-            cout << "Huruf tidak ditemukan dalam kalimat." << endl;
+            cout << "| Huruf tidak ditemukan dalam kalimat." << endl;
         }
+        cout << "|---------------------------------------------------------------------|" << endl;
 
-        delete[] kalimatDenganIndeks;
-        cout << "|--------------------------------------------------------------|" << endl;
+        delete[] kalimatDenganIndeks; // Hapus memori yang dialokasikan
 
-
-        // Untuk ngecek apakah user ingin mengulang
+        // Minta pengguna apakah ingin mencari huruf lagi
         cout << "Apakah Anda ingin mencari huruf lagi? (y/n): ";
         ulang = _getche();
         cout << endl;
@@ -378,6 +415,7 @@ int main() {
 
     return 0;
 }
+
 ```
 
 #### Output Unguided1
@@ -386,24 +424,26 @@ int main() {
 Penjelasan Program Unguided1 <br/>
 Program yang telah saya buat pada Unguided1 adalah program pencari sebuah huruf pada sebuah kalimat yang sudah di input dengan menggunakan Binary Search.<br/>
 Fungsi Utama Program pada Unguided1 yakni:<br/>
-1. Input Kalimat dan Huruf: Pengguna diminta untuk memasukkan sebuah kalimat dan sebuah huruf yang ingin dicari dalam kalimat tersebut.
-Pengubahan Huruf Besar ke Huruf Kecil: Program mengubah semua huruf dalam kalimat dan huruf yang dicari menjadi huruf kecil untuk memastikan pencarian tidak peka terhadap huruf besar dan kecil.<br/>
-2. Penyimpanan Karakter dan Indeks Asli: Program menyimpan setiap karakter dari kalimat beserta indeks asli mereka dalam sebuah array dinamis dari struktur KarakterIndeks_152.<br/>
-3. Pengurutan Karakter: Array yang berisi karakter dan indeks diurutkan berdasarkan karakter menggunakan fungsi sort.<br/>
-4. Pencarian Huruf dengan Binary Search: Program menggunakan algoritma binary search untuk mencari huruf yang dimasukkan oleh pengguna dalam array yang telah diurutkan.<br/>
-5. Menampilkan Hasil Pencarian: Jika huruf ditemukan, program menampilkan pesan yang menunjukkan posisi indeks asli dari huruf tersebut dalam kalimat. Jika tidak ditemukan, program menampilkan pesan bahwa huruf tidak ditemukan.<br/>
-6. Pengulangan Pencarian: Pengguna diberi opsi untuk mengulangi proses pencarian dengan memasukkan 'y' atau 'Y'. Program akan terus mengulang pencarian sampai pengguna memutuskan untuk berhenti.<br/>
+1. Input Kalimat dan Huruf: Pengguna diminta untuk memasukkan sebuah kalimat dan sebuah huruf yang ingin dicari dalam kalimat tersebut.<br/>
+2. Pengubahan Huruf Besar ke Huruf Kecil: Program mengubah semua huruf dalam kalimat dan huruf yang dicari menjadi huruf kecil untuk memastikan pencarian tidak peka terhadap huruf besar dan kecil.<br/>
+3. Penyimpanan Karakter dan Indeks Asli: Program menyimpan setiap karakter dari kalimat beserta indeks asli mereka dalam sebuah array dinamis dari struktur KarakterIndeks_152.<br/>
+4. Pengurutan Karakter menggunakan ascending: Array yang berisi karakter dan indeks diurutkan berdasarkan karakter menggunakan fungsi sort.<br/>
+5. Pencarian Huruf dengan Binary Search: Program menggunakan algoritma binary search untuk mencari huruf yang dimasukkan oleh pengguna dalam array yang telah diurutkan.<br/>
+6. Menampilkan Hasil Pencarian pada index ke-: Jika huruf ditemukan, program menampilkan pesan yang menunjukkan posisi indeks asli dari huruf tersebut dalam kalimat. Jika tidak ditemukan, program menampilkan pesan bahwa huruf tidak ditemukan.<br/>
+7. Pengulangan Pencarian: Pengguna diberi opsi untuk mengulangi proses pencarian dengan memasukkan 'y' atau 'Y'. Program akan terus mengulang pencarian sampai pengguna memutuskan untuk berhenti.<br/>
 
 Alur Programnya yakni:<br/>
 1. Membaca Input: Program meminta pengguna untuk memasukkan kalimat dan huruf yang ingin dicari.<br/>
 2. Pencarian Huruf: Huruf yang dicari dan karakter dalam kalimat diubah menjadi huruf kecil.<br/>
-3. Inisialisasi dan Pengurutan: Program menyimpan karakter dan indeks asli dalam array, kemudian mengurutkan array berdasarkan karakter.<br/>
+3. Inisialisasi dan Pengurutan menggunakan Ascending: Program menyimpan karakter dan indeks asli dalam array, kemudian mengurutkan array berdasarkan karakter.<br/>
 4. Pencarian: Program mencari huruf menggunakan binary search dalam array yang sudah diurutkan.<br/>
 5. Menampilkan Hasil: Program menampilkan hasil pencarian.<br/>
 6. Pengulangan atau Selesai: Program bertanya kepada pengguna apakah ingin mengulangi proses pencarian. Jika ya, proses diulangi; jika tidak, program berhenti.<br/>
 
 Pada Binary search terdapat beberapa function yakni:<br/>
-- Fungsi binarySearch melakukan pencarian biner pada array yang berisi struktur KarakterIndeks_152. Fungsi ini menerima pointer ke array kalimat, ukuran array ukuran, karakter yang akan dicari huruf, dan referensi ke indeksAsli untuk menyimpan indeks asli dari karakter yang ditemukan. Fungsi ini mengembalikan true jika karakter ditemukan dan false jika tidak.<br/>
+- Fungsi binarySearch_152: Fungsi ini digunakan untuk melakukan pencarian biner pada array yang berisi struktur KarakterIndeks_152. Fungsi ini menerima pointer ke array kalimat, ukuran array ukuran, karakter yang akan dicari huruf, dan referensi ke indeksAsli untuk menyimpan indeks asli dari karakter yang ditemukan. Fungsi ini mengembalikan true jika karakter ditemukan dan false jika tidak.<br/>
+- Fungsi getInputCharacter: Fungsi ini digunakan untuk mendapatkan input karakter dari pengguna tanpa perlu menekan tombol enter. <br/>
+- fungsi _getche() untuk mendapatkan input karakter secara langsung.<br/>
 - awal diinisialisasi ke 0, yang merupakan indeks awal dari array.<br/>
 - akhir diinisialisasi ke ukuran - 1, yang merupakan indeks akhir dari array.<br/>
 - Perulangan while ini berjalan selama awal kurang dari atau sama dengan akhir. Ini memastikan bahwa masih ada elemen yang perlu diperiksa dalam array.<br/>
@@ -411,7 +451,7 @@ Pada Binary search terdapat beberapa function yakni:<br/>
 - Fungsi _getche digunakan untuk mendapatkan input pengguna tanpa perlu menekan tombol enter.<br/>
 
 Penjelasan Binary Search Function <br/>
-bool binarySearch(const KarakterIndeks_152 *kalimat, int ukuran, char huruf, int &indeksAsli): Fungsi untuk mencari huruf dalam array yang sudah diurutkan menggunakan binary search.<br/>
+void cetakData_152(const KarakterIndeks_152 *kalimatDenganIndeks, int panjangKalimat): Fungsi untuk mencari huruf dalam array yang sudah diurutkan menggunakan binary search.<br/>
 - int awal = 0; int akhir = ukuran - 1;: Inisialisasi indeks awal dan akhir.<br/>
 - while (awal <= akhir): Loop selama interval masih valid.<br/>
 - int tengah = (awal + akhir) / 2;: Hitung indeks tengah.<br/>
@@ -422,12 +462,14 @@ bool binarySearch(const KarakterIndeks_152 *kalimat, int ukuran, char huruf, int
 Main Function<br/>
 - int main(): Fungsi utama tempat eksekusi program dimulai.<br/>
 - char ulang;: Variabel untuk menyimpan pilihan pengguna apakah akan mengulang program.<br/>
- -do { ... } while (ulang == 'y' || ulang == 'Y');: Loop untuk mengulangi proses pencarian huruf jika pengguna memilih 'y' atau 'Y'.<br/>
+- do { ... } while (ulang == 'y' || ulang == 'Y');: Loop untuk mengulangi proses pencarian huruf jika pengguna memilih 'y' atau 'Y'.<br/>
+- Main Function: Ini adalah fungsi utama tempat eksekusi program dimulai. Variabel ulang digunakan untuk menyimpan pilihan pengguna apakah akan mengulang program. Bagian lain dari kode program Anda tetap tidak berubah.<br/>
 
 Berikut penjelasan contoh program yang telah saya jalankan yakni:<br/>
-1. Masukkan sebuah Kalimat yang akan dicari: { 't', 'e', 'l', 'k', 'o', 'm'}.<br/>
-2. Masukkan huruf yang akan dicari: (o).<br/>
-3. akhir = 5 (karena panjang array adalah 6, indeks terakhir adalah 5, karena index dimulai dari 0)<br/>
+1. Masukkan sebuah Kalimat yang akan dicari: { 'I', 'T', 'T', 'e', 'l', 'k', 'o', 'm'}.<br/>
+2. Masukkan huruf yang akan dicari: (T).<br/>
+3. Pengurutan Data Ascending: Setelah data disimpan dalam array, Anda menggunakan fungsi sort() untuk mengurutkannya secara ascending berdasarkan hurufnya. Karena nilai ASCII untuk huruf kecil t adalah lebih besar dari huruf-huruf lain dalam kalimat, maka huruf t akan berada di urutan terakhir setelah diurutkan. Jadi, setelah pengurutan, array akan menjadi 'e', 'i', 'k', 'l', 'm', 'o', 't', 't'.<br/>
+4. akhir = 8 (karena panjang array adalah 8, indeks terakhir adalah 7, karena index dimulai dari 0)<br/>
 
 - Perulangan Search Pertama:<br/>
 1. Hitung tengah = 2.<br/>
