@@ -718,7 +718,9 @@ int main()
 
 #### Output Unguided1
 ![Screenshot Output Unguided1](output-unguided1.png)
-Penjelasan Program Unguided1 <br/>
+
+#### Penjelasan Program Unguided1 <br/>
+
 Program yang telah saya buat pada Unguided1 adalah program graph dengan menggunakan inputan user untuk menghitung jarak dari sebuah kota ke kota lainnya misalnya disini adalah Kota Bali dan Palu. Program ini mencakup fungsi untuk memasukkan dan menampilkan nama-nama kota (simpul) serta bobot antar kota (busur) dalam bentuk matriks ketetanggaan.<br/>
 
 * Tujuan Program<br/>
