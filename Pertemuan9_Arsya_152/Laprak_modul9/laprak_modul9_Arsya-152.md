@@ -20,6 +20,7 @@ c. Graph Berbobot (Weighted Graph)<br/>
 Dalam pemrograman, agar data yang ada dalam graph dapat diolah, maka graph harus dinyatakan dalam suatu struktur data yang dapat mewakili graph tersebut. Dalam hal ini graph perlu direpresentasikan kedalam bentuk array dan dimensi yang sering disebut matrix atau direpresentasikan dalam bentuk linked list. Bentuk mana yang dipilih biasanya tergantung kepada efisiensi dan kemudahan dalam membuat program. <br/>
 Berikut ini beberapa bentuk representasi graph :<br/>
 a.    Adjacency Matrix Graph tak berarah<br/>
+
 Matrik yang digambarkan pada gambar 1b merupakan representasi dalam bentuk Adjacency Matrik dari graf. Beberapa hal yang dapat dilihat atau dapat diterangkan pada Adjacency Matrik tersebut adalah sebagai berikut :<br/>
 <br/>1.      Matrik yang terbentuk adalah matrik bujur sangkar n x n, dimana n = jumlah simpul yang ada dalam graf tersebut. Matrik ini menyatakan hubungan antara simpul satu dengan simpul lainnya.<br/>
 <br/>2.      Matrik yang terbentuk adalah matrik simetris dengan sumbu simetris adalah diagonal dari titik kiri atas ke titik kanan bawah.<br/>
@@ -38,7 +39,7 @@ c.     Adjacency Matrix Graph berbobot tak Berarah<br/>
 Nilai yang ada dalam tiap elemen matrik, menyatakan bobot busur yang menghubungkan dua buah simpul yang bersangkutan. Untuk dua buah simpul yang tidak berhubungan langsung oleh sebuah busur, maka dianggap dihubungkan oleh sebuah busur yang nilai bobotnya tidak terhingga. Dalam pemograman, karena keperluan algoritma, maka dari total bobot seluruh busur yang ada atau yang mungkin ada.
 Contoh: pada gambar 3a simpul A dan C tidak berhubungan langsung melalui sebuah busur, maka untuk elemen matrik yang bersangkutan diisi dengan nilai 999 karena nilai 999 dalam kasus ini cukup mewakili nilai tidak terhingga.<br/>
 
-![Arsya-Penerapan Graf](https://github.com/arsyafarahman123/2311102152_Arsya-Fathiha-Rahman/blob/main/Pertemuan8_Arsya_152/Laprak_modul8/searching.png)<br/>
+![Arsya-Penerapan Graf](https://github.com/arsyafarahman123/2311102152_Arsya-Fathiha-Rahman/blob/main/Pertemuan9_Arsya_152/Laprak_modul9/graf_gambar.png)<br/>
 Kita dapat melihat bahwa representasi sekuensial dari graf berbobot berbeda dengan jenis graf lainnya. Di sini, nilai bukan nol dalam matriks ketetanggaan diganti dengan bobot sebenarnya dari tepi tersebut.<br/>
 Sisi AB mempunyai bobot = 4, maka pada matriks ketetanggaan kita atur perpotongan A dan B menjadi 4. Demikian pula, semua nilai bukan nol lainnya diubah ke bobotnya masing-masing.<br/>
 Daftar kedekatan lebih mudah diterapkan dan diikuti. Traversal yaitu untuk memeriksa apakah ada sisi dari satu titik ke titik lainnya memerlukan waktu O(1) dan menghilangkan suatu sisi juga memerlukan waktu O(1).<br/>
@@ -48,7 +49,7 @@ B. ```TREE``` <br/>
 Tree merupakan salah satu bentuk struktur data tidak linear yang menggambarkan hubungan yang bersifat hirarkis (hubungan one to many) antara elemen-elemen. Tree bisa didefinisikan sebagai kumpulan simpul/node dengan satu elemen khusus yang disebut Root dan node lainnya. Tree juga adalah suatu graph yang acyclic, simple, connected yang tidak mengandung loop.<br/>
 Sebuah binary search tree (bst) adalah sebuah pohon biner yang boleh kosong, dan setiap nodenya harus memiliki identifier/value. Value pada semua node subpohon sebelah kiiri adalah selalu lebih kecil dari value dari root, sedangkan value subpohon di sebelah kanan adalah sama atau lebih besar dari value pada root, masing-masing subpohon tersebut (kiri dan kanan) itu sendiri adalah juga binary search tree.<br/>
 Struktur data bst sangat penting dalam struktur pencarian, misalkan dalam kasus pencarian dalam sebuah list, jika list sudah dalam keadaan terurut maka proses pencarian akan semakin cepat, jika kita menggunakan  list contigue dan melakukan pencarian biner, akan tetapi  jika kita ingin melakukan perubahan isi list (insert atau delete), menggunakan list contigue akan sangat lambat, karena prose insert dan delete dalam list contigue butuh memindahkan linked-list, yang untuk operasi insert atau delete tinggal mengatur- atur pointer, akan tetapi pada n-linked list, kita tidak bisa melakukan pointer sembarangan setiap saat, kecuali hanya satu kali dengan kata lain hanya secara squential.
-![Arsya-Treee](https://github.com/arsyafarahman123/2311102152_Arsya-Fathiha-Rahman/blob/main/Pertemuan8_Arsya_152/Laprak_modul8/searching.png)<br/>
+![Arsya-Treee](https://github.com/arsyafarahman123/2311102152_Arsya-Fathiha-Rahman/blob/main/Pertemuan9_Arsya_152/Laprak_modul9/tree-gambar.jpg)<br/>
 Pohon ( tree) adalah graph terhubung yang tidak mengandung sirkuit. Pohon (tree) merupakan stuktur data yang tidak linier yang digambarkan dengan hubungan yang bersifat hirarkis antar satu elemen (Teddy Marcus; 2005). <br/>
 Jenis pohon dalam sturktur data sebagai berikut : <br/>
 a. Full binary tree <br/>
@@ -638,8 +639,7 @@ Menghapus subtree atau seluruh tree.<br/>
 ## Unguided1 <br/>
 
 1. Buatlah program graph dengan menggunakan inputan user untuk menghitung jarak dari sebuah kota ke kota lainnya.<br/>
-![Arsya-Soal Unguided 1](https://github.com/arsyafarahman123/2311102152_Arsya-Fathiha-Rahman/blob/main/Pertemuan8_Arsya_152/Laprak_modul8/searching.png)<br/>
-
+![Arsya-Soal Unguided 1](https://github.com/arsyafarahman123/2311102152_Arsya-Fathiha-Rahman/blob/main/Pertemuan9_Arsya_152/Laprak_modul9/soal-unguided1.png)<br/>
 
 ```C++ 
 /*
