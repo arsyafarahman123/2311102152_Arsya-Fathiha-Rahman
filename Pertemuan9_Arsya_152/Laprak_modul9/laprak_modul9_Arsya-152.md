@@ -9,33 +9,38 @@ Graf adalah kumpulan noktah (simpul) di dalam bidang dua dimensi yang dihubungka
 Graf merupakan suatu cabang ilmu yang memiliki banyak terapan. Banyak sekali struktur yang bisa direpresentasikan dengan graf, dan banyak masalah yang bisa diselesaikan dengan bantuan graf. Seringkali graf digunakan untuk merepresentasikan suaru jaringan. Misalkan jaringan jalan raya dimodelkan graf dengan kota sebagai simpul (vertex/node) dan jalan yang menghubungkan setiap kotanya sebagai sisi (edge) yang bobotnya (weight) adalah panjang dari jalan tersebut.<br/>
 Ada beberapa cara untuk menyimpan graph di dalam sitem komputer. Struktur data bergantung pada struktur graph dan algoritma yang digunakan untuk memanipulasi graph. Secara teori salah satu dari keduanya dapat dibedakan antara struktur list dan matriks, tetapi dalam penggunaannya struktur terbaik yang sering digunakan adalah kombinasi keduanya.<br/>
 Jenis Jenis Graph: <br/>
+
 a. Graph tak berarah (undirected graph atau non-directed graph) :<br/>
--  Urutan simpul dalam sebuah busur tidak dipentingkan. Misal busur e1 dapat disebut busur AB atau BA<br/>
+Urutan simpul dalam sebuah busur tidak dipentingkan. Misal busur e1 dapat disebut busur AB atau BA<br/>
+
 b. Graph berarah (directed graph) :<br/>
--  Urutan simpul mempunyai arti. Misal busur AB adalah e1 sedangkan busur BA adalah e8.<br/>
+Urutan simpul mempunyai arti. Misal busur AB adalah e1 sedangkan busur BA adalah e8.<br/>
+
 c. Graph Berbobot (Weighted Graph)<br/>
-- Jika setiap busur mempunyai nilai yang menyatakan hubungan antara 2 buah simpul, maka busur tersebut dinyatakan memiliki bobot.<br/>
-- Bobot sebuah busur dapat menyatakan panjang sebuah jalan dari 2 buah titik, jumlah rata-rata kendaraan perhari yang melalui sebuah jalan, dll.<br/>
+Jika setiap busur mempunyai nilai yang menyatakan hubungan antara 2 buah simpul, maka busur tersebut dinyatakan memiliki bobot.<br/>
+Bobot sebuah busur dapat menyatakan panjang sebuah jalan dari 2 buah titik, jumlah rata-rata kendaraan perhari yang melalui sebuah jalan, dll.<br/>
 
 Dalam pemrograman, agar data yang ada dalam graph dapat diolah, maka graph harus dinyatakan dalam suatu struktur data yang dapat mewakili graph tersebut. Dalam hal ini graph perlu direpresentasikan kedalam bentuk array dan dimensi yang sering disebut matrix atau direpresentasikan dalam bentuk linked list. Bentuk mana yang dipilih biasanya tergantung kepada efisiensi dan kemudahan dalam membuat program. <br/>
 Berikut ini beberapa bentuk representasi graph :<br/>
-a.    Adjacency Matrix Graph tak berarah<br/>
+1. Adjacency Matrix Graph tak berarah<br/>
 
 Matrik yang digambarkan pada gambar 1b merupakan representasi dalam bentuk Adjacency Matrik dari graf. Beberapa hal yang dapat dilihat atau dapat diterangkan pada Adjacency Matrik tersebut adalah sebagai berikut :<br/>
-<br/>1.      Matrik yang terbentuk adalah matrik bujur sangkar n x n, dimana n = jumlah simpul yang ada dalam graf tersebut. Matrik ini menyatakan hubungan antara simpul satu dengan simpul lainnya.<br/>
-<br/>2.      Matrik yang terbentuk adalah matrik simetris dengan sumbu simetris adalah diagonal dari titik kiri atas ke titik kanan bawah.<br/>
-<br/>3.      Data yang tedapat baik dalam baris maupun kolom, dapat menyatakan degree sebuah simpul. Contoh : baik pada baris D maupun kolom D jumlah angka 1 nya adalah 3 buah, dimana jumlah ini menyatakan degree simpul D.<br/>
+<br/>a.      Matrik yang terbentuk adalah matrik bujur sangkar n x n, dimana n = jumlah simpul yang ada dalam graf tersebut. Matrik ini menyatakan hubungan antara simpul satu dengan simpul lainnya.<br/>
+<br/>b.      Matrik yang terbentuk adalah matrik simetris dengan sumbu simetris adalah diagonal dari titik kiri atas ke titik kanan bawah.<br/>
+<br/>c.      Data yang tedapat baik dalam baris maupun kolom, dapat menyatakan degree sebuah simpul. Contoh : baik pada baris D maupun kolom D jumlah angka 1 nya adalah 3 buah, dimana jumlah ini menyatakan degree simpul D.<br/>
 
-b.    Adjacency Matrix Graf Berarah<br/>
+2.    Adjacency Matrix Graf Berarah<br/>
 Matrik yang digambarkan pada gambar 2b merupakan representasi dalam bentuk Adjacency Matrik dari graf yang digambarkan pada gambar 2a. Beberapa hal yang dapat dilihat atau dapat diterangkan pada Adjacency Matrik tersebut adalah sebagai berikut :<br/>
-<br/>1.      Matrik yang terbentuk adalah matrik bujur sangkar n x n, dimana n = jumlah simpul yang ada dalam graf tersebut. Matrik ini menyatakan hubungan antara simpul satu dengan simpul lainnya.<br/>
-2.      Matrik yang terbentuk mungkin simetris mungkin juga tidak simetris. Menjadi Simetris bila hubungan antara dua buah simpul (v1 dan v2) terdapat busur dari v1 ke v2 dan juga sebaliknya.<br/>
-3.      Hal pokok yang dinyatakan oleh matrik ini adalah : busur yang ’keluar’ dari suatu simpul. Dengan demikian, data yang terdapat dalam suatu baris, dapat menyatakan outdegree simpul yang bersangkutan.<br/>
+<br/>a.    Matrik yang terbentuk adalah matrik bujur sangkar n x n, dimana n = jumlah simpul yang ada dalam graf tersebut. Matrik ini menyatakan hubungan antara simpul satu dengan simpul lainnya.<br/>
+b.     Matrik yang terbentuk mungkin simetris mungkin juga tidak simetris. Menjadi Simetris bila hubungan antara dua buah simpul (v1 dan v2) terdapat busur dari v1 ke v2 dan juga sebaliknya.<br/>
+
+Hal pokok yang dinyatakan oleh matrik ini adalah : busur yang ’keluar’ dari suatu simpul. Dengan demikian, data yang terdapat dalam suatu baris, dapat menyatakan outdegree simpul yang bersangkutan.<br/>
 Contoh : Jumlah elemen yang nilainya = 1 pada baris B ada 3 elemen,ini menyatakan jumlah outdegree simpul B adalah 3 buah.<br/>
-4.      Data yang terdapat dalam suatu kolom, dapat menyatakan indegree simpul bersangkutan.<br/>
+
+Data yang terdapat dalam suatu kolom, dapat menyatakan indegree simpul bersangkutan.<br/>
 Contoh : Jumlah elemen yang nilainya 1 pada kolom B ada 2 elemen, ini menyatakan indegree simpul B adalah 2 buah.<br/>
 
-c.     Adjacency Matrix Graph berbobot tak Berarah<br/>
+3.   <br/>Adjacency Matrix Graph berbobot tak Berarah<br/>
 Nilai yang ada dalam tiap elemen matrik, menyatakan bobot busur yang menghubungkan dua buah simpul yang bersangkutan. Untuk dua buah simpul yang tidak berhubungan langsung oleh sebuah busur, maka dianggap dihubungkan oleh sebuah busur yang nilai bobotnya tidak terhingga. Dalam pemograman, karena keperluan algoritma, maka dari total bobot seluruh busur yang ada atau yang mungkin ada.
 Contoh: pada gambar 3a simpul A dan C tidak berhubungan langsung melalui sebuah busur, maka untuk elemen matrik yang bersangkutan diisi dengan nilai 999 karena nilai 999 dalam kasus ini cukup mewakili nilai tidak terhingga.<br/>
 
@@ -1503,49 +1508,49 @@ int main()
 
 ```
 #### Output Unguided2
-### Tampilan seluruh menu
+### 1.  Tampilan seluruh menu
 ![Screenshot Output Unguided2](output_unguided2_Pembuka.png)
-### Tampilan node A berhasil dibuat sebagai root (1. Menu Tambah Node Root)
+### 2. Tampilan node A berhasil dibuat sebagai root (1. Menu Tambah Node Root)
 ![Screenshot Output Unguided2](output-unguided2.png)
-### Tampilan output menu ( Node B berhasil ditambahkan ke child kiri A) (2. Menu Tambah Kiri)
+### 3. Tampilan output menu ( Node B berhasil ditambahkan ke child kiri A) (2. Menu Tambah Kiri)
 ![Screenshot Output Unguided2](output-unguided2_part2.png)
-### Tampilan output menu ( Node C berhasil ditambahkan ke child kanan A) (2. Menu Tambah Kiri)
+### 4. Tampilan output menu ( Node C berhasil ditambahkan ke child kanan A) (2. Menu Tambah Kiri)
 ![Screenshot Output Unguided2](output-unguided2_part3.png)
-### Tampilan output menu ( Node D berhasil ditambahkan ke child kiri B) (2. Menu Tambah Kiri)
+### 5. Tampilan output menu ( Node D berhasil ditambahkan ke child kiri B) (2. Menu Tambah Kiri)
 ![Screenshot Output Unguided2](output-unguided2_part4.png)
-### Tampilan output menu ( Node E berhasil ditambahkan ke child kanan B) (3. Menu Tambah Kanan)
+### 6. Tampilan output menu ( Node E berhasil ditambahkan ke child kanan B) (3. Menu Tambah Kanan)
 ![Screenshot Output Unguided2](output-unguided2_part5.png)
-### Tampilan output menu ( Node F berhasil ditambahkan ke child kiri C) (2. Menu Tambah Kiri)
+### 7. Tampilan output menu ( Node F berhasil ditambahkan ke child kiri C) (2. Menu Tambah Kiri)
 ![Screenshot Output Unguided2](output-unguided2_part6.png)
-### Tampilan output menu ( Node G berhasil ditambahkan ke child kiri E) (2. Menu Tambah Kiri)
+### 8. Tampilan output menu ( Node G berhasil ditambahkan ke child kiri E) (2. Menu Tambah Kiri)
 ![Screenshot Output Unguided2](output-unguided2_part7.png)
-### Tampilan output menu ( Node H berhasil ditambahkan ke child kanan E) (3. Menu Tambah Kanan)
+### 9. Tampilan output menu ( Node H berhasil ditambahkan ke child kanan E) (3. Menu Tambah Kanan)
 ![Screenshot Output Unguided2](output-unguided2_part8.png)
-### Tampilan output menu ( Node I berhasil ditambahkan ke child kiri G) (2. Menu Tambah Kiri )
+### 10. Tampilan output menu ( Node I berhasil ditambahkan ke child kiri G) (2. Menu Tambah Kiri )
 ![Screenshot Output Unguided2](output-unguided2_part9.png)
-### Tampilan output menu ( Node J berhasil ditambahkan ke child kanan G) (3. Menu Tambah Kanan)
+### 11. Tampilan output menu ( Node J berhasil ditambahkan ke child kanan G) (3. Menu Tambah Kanan)
 ![Screenshot Output Unguided2](output-unguided2_part10.png)
-### Node C berhasil diubah jadi Z (4. Menu Update Data)
+### 12. Node C berhasil diubah jadi Z (4. Menu Update Data)
 ![Screenshot Output Unguided2](output-unguided2_part11.png)
-### Node Z berhasil diubah jadi C (4. Menu Update Data)
+### 13. Node Z berhasil diubah jadi C (4. Menu Update Data)
 ![Screenshot Output Unguided2](output-unguided2_part12.png)
-### Menu Retrive (5. Lihat/Retrive Data)
+### 14. Menu Retrive (5. Lihat/Retrive Data)
 ![Screenshot Output Unguided2](retrive.png)
-### Mencari data C (6. Cari Data)
-![Screenshot Output Unguided2](output-unguided2_part13.png)
-### PreOrder (7. Menu Transversal Preorder)
-![Screenshot Output Unguided2](output-unguided2_part14.png)
-### InOrder (8. Menu Transversal InOrder)
-![Screenshot Output Unguided2](output-unguided2_part15.png)
-### PostOrder (9. Menu Transversal PostOrder)
-![Screenshot Output Unguided2](output-unguided2_part16.png)
-### Menghapus Subtree (10. Menu Hapus Subtree)
+### 15. Mencari data C (6. Cari Data)
+![Screenshot Output Unguided2](cari.png)
+### 16. PreOrder (7. Menu Transversal Preorder)
+![Screenshot Output Unguided2](preorder.png)
+### 17. InOrder (8. Menu Transversal InOrder)
+![Screenshot Output Unguided2](inorder.png)
+### 18. PostOrder (9. Menu Transversal PostOrder)
+![Screenshot Output Unguided2](postorder.png)
+### 19. Menghapus Subtree (10. Menu Hapus Subtree)
 ![Screenshot Output Unguided2](hapus_subtree.png)
-### Menghapus Seluruh Subtree (11. Menu Hapus Seluruh Subtree)
+### 20. Menghapus Seluruh Subtree (11. Menu Hapus Seluruh Subtree)
 ![Screenshot Output Unguided2](hapus-seluruh_subtree.png)
-### Karakteristik  Tree (12. Menu Karakteristik Tree)
+### 21. Karakteristik  Tree (12. Menu Karakteristik Tree)
 ![Screenshot Output Unguided2](karakteristik.png)
-### Menu Child dan Descendant (13. Tampilkan Child dan Descendant)
+### 22. Menu Child dan Descendant (13. Tampilkan Child dan Descendant)
 ![Screenshot Output Unguided2](child-descendant.png)
 
 Penjelasan Program Unguided2 <br/>
