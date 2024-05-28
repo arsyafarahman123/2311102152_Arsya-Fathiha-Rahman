@@ -40,7 +40,7 @@ Contoh : Jumlah elemen yang nilainya = 1 pada baris B ada 3 elemen,ini menyataka
 Data yang terdapat dalam suatu kolom, dapat menyatakan indegree simpul bersangkutan.<br/>
 Contoh : Jumlah elemen yang nilainya 1 pada kolom B ada 2 elemen, ini menyatakan indegree simpul B adalah 2 buah.<br/>
 
-3.   <br/>Adjacency Matrix Graph berbobot tak Berarah<br/>
+3.  Adjacency Matrix Graph berbobot tak Berarah<br/>
 Nilai yang ada dalam tiap elemen matrik, menyatakan bobot busur yang menghubungkan dua buah simpul yang bersangkutan. Untuk dua buah simpul yang tidak berhubungan langsung oleh sebuah busur, maka dianggap dihubungkan oleh sebuah busur yang nilai bobotnya tidak terhingga. Dalam pemograman, karena keperluan algoritma, maka dari total bobot seluruh busur yang ada atau yang mungkin ada.
 Contoh: pada gambar 3a simpul A dan C tidak berhubungan langsung melalui sebuah busur, maka untuk elemen matrik yang bersangkutan diisi dengan nilai 999 karena nilai 999 dalam kasus ini cukup mewakili nilai tidak terhingga.<br/>
 
